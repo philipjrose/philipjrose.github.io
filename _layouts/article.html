@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="article-layout">
+    <div class="container">
+        <header>
+            <h1 class="site-title"><a href="/">Philip J. Rose</a></h1>
+        </header>
+        
+        <main>
+            <h2>{{ page.title }}</h2>
+            <span class="article-date">{{ page.date | date_to_string: "ordinal" }}</span>
+
+            <div class="article-content">
+                {{content}}
+            </div>
+
+            <hr />
+            <p class="article-feedback">If you have feedback, thoughts or questions, let me know via <a href="mailto:hello@philipjrose.com">email</a> or on <a href="{{ site.twitter_url }}">Twitter</a>.</p>
+        </main>
+
+        {% include footer.html %}
+    </div>
+  </body>
+</html>

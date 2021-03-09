@@ -1,0 +1,16 @@
+url: "http://199.83.222.136:4000" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Philip J. Rose" # the name of your site, e.g. ACME Corp.
+
+# Contact methods
+email: "hello@philipjrose.com"
+linkedin_url: "https://www.linkedin.com/in/philipjrose/"
+twitter_url: "https://twitter.com/philipjamesrose"
+twitter_username: "@philipjamesrose"
+
+collections:
+  posts:
+    permalink: /writing/:title
+
+plugins:
+  - jekyll-feed

@@ -1,0 +1,265 @@
+@charset 'utf-8';
+
+// Colours
+
+$backgroundColour: #F8F5EE;
+$primaryColour: #013602;
+$bodyTextColour: #1C1C1C;
+
+// Fonts
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  src: url('/assets/fonts/Bitter-VariableFont_wght.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3 VF';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/SourceSans3VF-Roman.ttf.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Source Sans 3 VF';
+  font-style: italic;
+  src: url('/assets/fonts/SourceSans3VF-Italic.ttf.woff2') format('woff2')
+}
+
+// Font declarations
+
+$headerFont: "Bitter", serif;
+$bodyFont: "Source Sans 3 VF",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+html {
+  box-sizing: border-box;
+  
+  font-size: 100%;
+  font-weight: 400;
+
+  height: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+body {
+  background: $backgroundColour;
+  color: $bodyTextColour;
+
+  height: 100%;
+
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.home-layout .container {
+  max-width: 56rem;
+}
+
+.article-layout .container {
+  max-width: 42rem;
+}
+
+header, footer {
+  flex: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a, a:visited {
+  color: $primaryColour;
+}
+
+.home-layout header {
+  margin: 4.5rem 0;
+}
+
+@media (max-width: 25em) {
+  .home-layout header {
+    margin: 3rem 0;
+  }
+}
+
+.article-layout header {
+  margin: 1.5rem 0;
+}
+
+h1, h2, h3 {
+  font-family: $headerFont;
+  color: $primaryColour;
+}
+
+p {
+  font-family: $bodyFont;
+  font-size: 1rem;
+}
+
+.site-title {
+  text-transform: lowercase;
+}
+
+.home-layout .site-title {
+  font-size: 4rem;
+  font-weight: 400;
+  font-variation-settings: "wght" 600;
+  margin: 0;
+}
+
+@media (max-width: 25em) {
+  .home-layout .site-title {
+    font-size: 1.5rem;
+  }
+}
+
+.article-layout .site-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-variation-settings: "wght" 600;
+  margin: 0;
+}
+
+.article-layout .site-title a {
+  text-decoration: none;
+}
+
+.home-layout .introduction {
+  margin: 0 0 4.5rem 0;
+  font-family: $headerFont;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 150%;
+  color: $bodyTextColour;
+}
+
+@media (max-width: 25em) {
+  .home-layout .introduction {
+    font-size: 1.5rem;
+
+    margin-bottom: 3rem;
+  }
+}
+
+.home-layout .introduction .emoji {
+  letter-spacing: 0.1em;
+}
+
+.section h2 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  margin: 1rem 0;
+}
+
+.list-articles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-articles li {
+  margin: 1.25em 0;
+}
+
+.section-writing .alternative-ways-to-consume {
+  font-size: 1rem/130%;
+}
+
+.section-writing .article-date {
+  font-family: $bodyFont;
+  font-size: 1rem;
+  font-variant-caps: all-small-caps;
+}
+
+.article-title {
+  font-family: $headerFont;
+  font-weight: 400;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.article-summary {
+  margin: 0.5em 0;
+  max-width: 90ch;
+
+  font-size: 1rem/130%;
+}
+
+footer {
+  font-family: $bodyFont;
+  color: $bodyTextColour;
+  text-align: center;
+  text-transform: lowercase;
+  margin: 1rem 0;
+}
+
+.article-layout main {
+  margin: 0 auto;
+}
+
+.article-layout h2 {
+  font-size: 1.875rem;
+  font-weight: 400; 
+  text-align: center;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.article-layout .article-date {
+  font-family: $bodyFont;
+  font-size: 1rem;
+  font-variant-caps: all-small-caps;
+
+  margin-top: -1em;
+
+  display: block;
+  text-align: center;
+}
+
+.article-layout p {
+  font-size: 1rem;
+  line-height: 139%;
+  margin: 2rem auto;
+}
+
+.article-content p:last-of-type {
+  margin-bottom: 3em;
+}
+
+.article-content p strong {
+  font-weight: 600;
+}
+
+.article-layout .article-feedback {
+  font-size: 1rem;
+  font-style: italic;
+  
+  margin: 1em auto;
+}

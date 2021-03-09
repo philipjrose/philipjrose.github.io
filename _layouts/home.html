@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-GB" }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="home-layout">
+    <div class="container">
+      <header>
+        <h1 class="site-title">Philip J. Rose</h1>
+      </header>
+  
+      <main>
+        <p class="introduction">Hello<span class="emoji"> 👋 </span>I’m a product manager trying to improve transportation<span class="emoji"> 🛴 </span>You can find my writing<span class="emoji"> ✍️ </span>here, more about my work<span class="emoji"> 👨🏻‍💻 </span>on <a href="{{ site.linkedin_url }}">LinkedIn</a> and get in touch<span class="emoji"> 💬 </span>via email or on Twitter.</p>
+    
+        <div class="section section-writing">
+          <h2>Writing</h2>
+          <p class="alternative-ways-to-consume">If you prefer, you can subscribe to a <a href="{{ "/feed.xml" | relative_url }}">feed</a> of all articles.</p>
+    
+          <ul class="list-articles">
+            {% for post in site.posts %}
+              <li>
+                <span class="article-date">{{ post.date | date_to_string: "ordinal" }}</span>
+                <a class="article-title" href="{{ post.url }}">{{ post.title }}</a>
+                <p class="article-summary">{{ post.summary }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </main>
+      
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
