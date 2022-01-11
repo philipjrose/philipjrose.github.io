@@ -243,10 +243,14 @@ footer {
   text-align: center;
 }
 
-.article-layout p {
+.article-content {
+  padding-top: 1.5rem;
+}
+
+.article-content p {
   font-size: 1rem;
-  line-height: 139%;
-  margin: 2rem auto;
+  line-height: 150%;
+  margin: 0 0 1.5rem 0;
 }
 
 .article-content p:last-of-type {
