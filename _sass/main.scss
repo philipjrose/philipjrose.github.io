@@ -257,6 +257,13 @@ footer {
   margin-bottom: 3em;
 }
 
+.article-content sup {
+  font-size: 0.75rem;
+  line-height: 0;
+  
+  margin-left: 2px;
+}
+
 .article-content p strong {
   font-weight: 600;
 }
