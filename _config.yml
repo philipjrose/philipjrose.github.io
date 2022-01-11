@@ -12,5 +12,9 @@ collections:
   posts:
     permalink: /writing/:title
 
+kramdown:
+  # Keep ↩ from rendering as an emoji in some browsers
+  footnote_backlink: "&#x21A9;&#xFE0E;"
+
 plugins:
   - jekyll-feed
