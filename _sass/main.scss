@@ -295,6 +295,12 @@ footer {
   font-size: 0.85rem;
 }
 
+/* Fixes backlinks to display as text, not emoji, in Chromium browsers */
+.article-content .footnotes .reversefootnote {
+  font-family: monospace;
+  font-size: 1rem;
+}
+
 .article-layout .article-feedback {
   font-size: 1rem;
   font-style: italic;
