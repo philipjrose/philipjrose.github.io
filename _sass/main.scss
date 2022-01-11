@@ -268,6 +268,11 @@ footer {
   font-weight: 600;
 }
 
+/* These divide the article body from footnotes */
+.article-content hr {
+  width: 50%;
+}
+
 .article-layout .article-feedback {
   font-size: 1rem;
   font-style: italic;
