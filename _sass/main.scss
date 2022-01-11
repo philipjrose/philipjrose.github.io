@@ -232,6 +232,11 @@ footer {
   margin-right: -50vw;
 }
 
+.article-layout h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 .article-layout .article-date {
   font-family: $bodyFont;
   font-size: 1rem;
@@ -253,8 +258,8 @@ footer {
   margin: 0 0 1.5rem 0;
 }
 
-.article-content p:last-of-type {
-  margin-bottom: 3em;
+.article-content > :last-child {
+  margin-bottom: 3rem;
 }
 
 .article-content sup {
@@ -271,6 +276,23 @@ footer {
 /* These divide the article body from footnotes */
 .article-content hr {
   width: 50%;
+}
+
+.article-content .footnotes {
+  font-family: $bodyFont;
+  font-size: 0.85rem;
+}
+
+.article-content .footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.article-content .footnotes li {
+  margin: 1.5rem auto;
+}
+
+.article-content .footnotes p {
+  font-size: 0.85rem;
 }
 
 .article-layout .article-feedback {
