@@ -240,7 +240,11 @@ footer {
 
 .article-layout h3 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+.article-layout p + h3 {
+  margin-top: 3.5rem;
 }
 
 .article-layout .article-date {
