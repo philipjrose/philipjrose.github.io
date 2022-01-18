@@ -121,12 +121,18 @@ p {
   text-transform: lowercase;
 }
 
+.site-title::after {
+  content: ".";
+}
+
 .home-layout .site-title {
   font-size: 4rem;
   font-weight: 400;
   font-variation-settings: "wght" 600;
   margin: 0;
 }
+
+
 
 @media (max-width: 25em) {
   .home-layout .site-title {
