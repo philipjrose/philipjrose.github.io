@@ -269,7 +269,7 @@ footer {
 }
 
 .article-content > :last-child {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .article-content sup {
@@ -328,10 +328,15 @@ only screen and (max-width: 760px),
 
 .article-content table caption {
   caption-side: bottom;
+}
 
+.article-content figcaption,
+.article-content table caption {
   padding: 0.5rem;
 
+  font-family: $bodyFont;
   font-style: italic;
+  text-align: center;
 }
 
 .article-content table.header-left th {
@@ -358,6 +363,14 @@ only screen and (max-width: 760px),
 .article-content table.header-left thead td {
   padding-bottom: 0.25rem;
   border-bottom: 1px solid $bodyTextColour;
+}
+
+.article-content figure {
+  margin: 1.5rem 0;
+}
+
+.article-content img {
+  max-width: 100%;
 }
 
 /* These divide the article body from footnotes */
